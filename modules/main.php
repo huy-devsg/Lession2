@@ -1,0 +1,47 @@
+<div class="main">
+    <?php
+        if(isset($_GET['action']))
+        {
+            $click = $_GET['action'];
+            if(isset(($_GET['query'])))
+            {
+                $query = $_GET['query'];
+            }
+                if($click=='products')
+                {
+                    if(isset($query))
+                    {
+                        if($query=='edit')
+                        {
+                            include('modules/product_consollers/edit.php');
+                        }
+                        elseif($query=='delete')
+                        {
+                            include('modules/product_consollers/delete.php');
+                        }
+                        elseif($query=='copy')
+                        {
+                            include('modules/product_consollers/copy.php');
+                        }
+                        else
+                        {
+                            include('modules/product_consollers/show.php');
+                        } 
+                    }
+                    else
+                    {
+                        include('modules/product_consollers/add.php');
+                    include('modules/product_consollers/product_list.php'); 
+                    }             
+                }
+            elseif($click=='categories')
+            {
+                include('modules/category_consollers/add.php');
+                include('modules/category_consollers/category_list.php');
+            }   
+        }
+        else{
+            include('modules/dashboard.php');
+        }
+?>
+</div>
