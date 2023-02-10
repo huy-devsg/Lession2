@@ -43,5 +43,5 @@ class CategoryList
                 </td>
                 </tr>
                 <tr><td colspan="4" border="0"><input type="submit" class="btn btn-primary" style="float:right" name="product_copy" value="Copy"></td></tr>
-                </form>
+    </form>
     </table>

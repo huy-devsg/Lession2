@@ -25,30 +25,37 @@ $categories = $categoryList->getCategories();
 ?>
 <h2 style="text-align:center">Product Edit</h2>
     <table border="1" width="100%" style="border-collapse:collapse">
-    <form method="POST" action="modules/product_consollers/process.php"enctype="multipart/form-data">
-        <tr>
+        <form method="POST" action="modules/product_consollers/process.php"enctype="multipart/form-data">
+            <tr>
                 <th>ID Product</th>
                 <th>Product Name</th>
                 <th>Category Name</th>
                 <th>Image Product</th>
             </tr>
-                <tr>
-                    <td width="70px" align="center">
+            <tr>
+                <td width="70px" align="center">
                     <input type="hidden" name="product_id" value="<?php echo $product_id ?>">    
-                    <?php echo $product_id ?></td>
-                    <td><input type="text" name="product_name" value="<?php echo $row['product_name'] ?>"></td>
-                    <td>
-                        <select name="category_name"style="width:100%;height:30px;">
-                                    <?php foreach ($categories as $category) { ?>
-                                        <option value="<?php echo $category['category_name']; ?>"><?php echo $category['category_name']; ?></option>
-                                    <?php } ?>
-                                </select></td>
-                    <td style="text-align:center">
+                        <?php echo $product_id ?>
+                </td>
+                <td>
+                    <input type="text" name="product_name" value="<?php echo $row['product_name'] ?>">
+                </td>
+                <td>
+                    <select name="category_name"style="width:100%;height:30px;">
+                        <?php foreach ($categories as $category) { ?>
+                            <option value="<?php echo $category['category_name']; ?>"><?php echo $category['category_name']; ?></option>
+                        <?php } ?>
+                    </select></td>
+                <td style="text-align:center">
                     <input type="hidden" name="copy_images" value="<?php echo $row['images']?>">
-                    <img src='modules/product_consollers/product_image/<?php echo $row['images']?>'style='max-height:80px;max-width:40px'  alt='no image'>
-                <p>Upload new images product : <input type="file" name="images"></p>
+                        <img src='modules/product_consollers/product_image/<?php echo $row['images']?>'style='max-height:80px;max-width:40px'  alt='no image'>
+                            <p>Upload new images product : <input type="file" name="images"></p>
                 </td>   
-                </tr>
-                <tr><td colspan="4" border="0"><input type="submit" class="btn btn-primary" style="float:right" name="product_edit" value="edit"></td></tr>
-                </form>
+            </tr>
+            <tr>
+                <td colspan="4" border="0">
+                    <input type="submit" class="btn btn-primary" style="float:right" name="product_edit" value="edit">
+                </td>
+            </tr>
+        </form>
     </table>

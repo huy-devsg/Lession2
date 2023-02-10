@@ -88,9 +88,6 @@ if (isset($_GET['keyword'])) {
     $productList = $product->filterByCategory($category, $currentPage, $itemsPerPage);
     $totalItems = count($productList);
 }
-
-
-
 $itemsPerPage = 10;
 $searchKeyword = "";
 if (isset($_GET['search_keyword'])) {
