@@ -16,7 +16,6 @@
                         </div>
                         <form method="POST" action="modules/category_consollers/process.php">
                             <div class="modal-body">
-    
                                 <p>Category name</p>
                                 <p><input type="text" name="category_name">
                             </div>
