@@ -67,6 +67,7 @@ class Product
     }
     
     
+    
 }
 
 $sqlProductList = new Product($mysqli);
