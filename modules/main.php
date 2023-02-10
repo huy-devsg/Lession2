@@ -1,5 +1,6 @@
 <div class="main">
     <?php
+
         if(isset($_GET['action']))
         {
             $click = $_GET['action'];
@@ -13,6 +14,10 @@
                     {
                         if($query=='edit')
                         {
+                            if(isset($_GET['product_id']))
+                            {
+                            $_SESSION['sp_id']=$_GET['product_id'];
+                            }
                             include('modules/product_consollers/edit.php');
                         }
                         elseif($query=='delete')
@@ -31,6 +36,7 @@
                     else
                     {
                         include('modules/product_consollers/add.php');
+                        include('modules/product_consollers/search.php');
                     include('modules/product_consollers/product_list.php'); 
                     }             
                 }

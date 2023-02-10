@@ -1,20 +1,60 @@
-
-<div style="text-align:center">
-    <?php
-        $sql = "SELECT COUNT(*) as count FROM tbl_product";
-        $query = $mysqli->query($sql);
-        $row = $query->fetch_array();
-        $total_records = $row['count'];
-        $product = new Product($mysqli);
-        $current_page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
-        $per_page = 10;
-        $productList = $product->list($current_page, $per_page);
-        $total_pages = ceil($total_records / $per_page);
-        for ($i = 1; $i <= $total_pages; $i++) {
-            if ($i == $current_page) {
-                echo "<span style='font-weight:bold; color:red;'>" . $i . "</span> &emsp;";
-            } else {
-                echo "<a href='?page=" . $i . "'>" . $i . "</a> &emsp;";
-            }
+<?php
+declare(strict_types=1);
+class Product{
+    public function list(int $page = 1, int $itemsPerPage = 10): array
+    {
+        $start = ($page-1)  * $itemsPerPage;
+        $sqlProductList = "SELECT * FROM tbl_product ORDER BY product_name DESC LIMIT $start, $itemsPerPage";
+        $queryProductList = $this->mysqli->query($sqlProductList);
+    
+        $productList = array();
+    
+        while ($row = $queryProductList->fetch_array()) {
+            $productList[] = $row;
         }
+    
+        return $productList;
+    }
+    
+        public function count(): int
+        {
+            $sqlProductCount = "SELECT COUNT(*) as total FROM tbl_product";
+            $queryProductCount = $this->mysqli->query($sqlProductCount);
+            $row = $queryProductCount->fetch_array();
+            return (int) $row['total'];
+        }
+
+
+
+
+
+
+
+
+
+}
+
+$itemsPerPage = 10;
+
+$product = new Product($mysqli);
+$productList = $product->list($currentPage, $itemsPerPage);
+$totalItems = $product->count();
+$totalPages = ceil($totalItems / $itemsPerPage);
+
+
+
+?>
+<div style="text-align: center;">
+<ul class="pagination">
+  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <?php for ($i = 1; $i <= $totalPages; $i++) {
+        if ($i == $currentPage) {
+            echo '<li class="page-item"><a class="page-link" style="color:red;font-weight:bold" href="index.php?action=products&id_pages='.$i.'">'.$i.'</a></li>';
+        } else {
+            echo '<li class="page-item"><a class="page-link" href="index.php?action=products&id_pages='.$i.'">'.$i.'</a></li>';
+        }
+    }
     ?>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</div>

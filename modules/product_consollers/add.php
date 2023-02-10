@@ -33,8 +33,7 @@ $categories = $categoryList->getCategories();
                 </button>
             </div>
             <form method="POST" action="modules/product_consollers/process.php" enctype="multipart/form-data">
-                <div class="modal-body">
-                        
+                <div class="modal-body">            
                             <p>Product Name</p>
                                 <p><input type="text" name="product_name"style="width:100%;height:30px;">
                                 <p> Category</p>

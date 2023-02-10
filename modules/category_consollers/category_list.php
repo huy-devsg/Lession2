@@ -14,22 +14,8 @@ class CategoryManager
         $query_category_list = mysqli_query($this->mysqli, $sql_category_list);
         return mysqli_fetch_all($query_category_list, MYSQLI_ASSOC);
     }
-/*
-    public function deleteCategory($categoryId)
-    {
-        $sql_delete_category = "DELETE FROM tbl_category WHERE id = '$categoryId'";
-        mysqli_query($this->mysqli, $sql_delete_category);
-    }
-
-    public function updateCategory($categoryId, $categoryName)
-    {
-        $sql_update_category = "UPDATE tbl_category SET category_name = '$categoryName' WHERE id = '$categoryId'";
-        mysqli_query($this->mysqli, $sql_update_category);
-    }
-*/
 }
-?>
-<?php
+
 $categoryManager = new CategoryManager($mysqli);
 $categoryList = $categoryManager->getCategoryList();
     echo "<table border='1' width='100%' style='border-collapse:collapse;text-align:center'>";
@@ -46,7 +32,15 @@ foreach ($categoryList as $category) {
     echo "<td>" . $i . "</td>";
     echo "<td align='center'>" . $category['category_name'] . "</td>";
     echo "<td>";
-    echo "CODE NOT ADDED FUNCTION ADDED, REMOVED";
+        echo '
+                    <i class="fas fa-edit"></i>
+                </a>&nbsp;
+                        <i class="fa fa-minus-circle"></i>
+                </a>&emsp;
+                        <i class="fa fa-clone" aria-hidden="true"></i>
+                </a>&emsp;
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>';
     echo "</td>";
     echo "</tr>";
 } 
