@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 09, 2023 lúc 07:56 AM
+-- Thời gian đã tạo: Th2 11, 2023 lúc 06:23 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.12
 
@@ -76,17 +76,50 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`product_id`, `product_name`, `category_id`, `category_name`, `images`) VALUES
-(516, 'Iphone 11', 0, 'DIENTHOAI', '1675757593_OIP.jpg'),
-(517, 'Iphone 11', 0, 'DIENTHOAI', '1675757751_OIP.jpg'),
-(518, 'Iphone 11', 0, 'DIENTHOAI', '1675757593_OIP.jpg'),
-(521, 'Iphone 11', 0, 'DIENTHOAI', '1675757593_OIP.jpg'),
-(523, 'Iphone 11', 0, 'DIENTHOAI', '1675757593_OIP.jpg'),
-(524, 'Iphone xs max', 0, 'DIENTHOAI', '1675757751_OIP.jpg'),
-(526, 'Iphone xs max', 0, 'DIENTHOAI', '1675757593_OIP.jpg'),
-(528, 'Iphone xs max', 0, 'DIENTHOAI', '1675757593_OIP.jpg'),
-(529, 'Iphone xs max', 0, 'DIENTHOAI', '1675757751_OIP.jpg'),
-(531, 'Iphone xs max', 0, 'DIENTHOAI', '1675771333_OIP.jpg'),
-(532, 'iphone 8 plus', 0, 'DIENTHOAI', '1675771471_OIP.jpg');
+(645, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(646, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(647, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(648, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(649, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(650, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(651, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(652, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(653, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(654, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(655, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(656, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(657, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(658, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(659, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(660, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(661, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(662, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(663, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(664, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(665, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(666, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(667, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(668, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(669, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(670, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(671, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(672, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(673, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(674, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(675, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(676, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(677, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(678, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(679, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(680, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(681, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(682, 'Macbook pro 2022', 0, 'laptop', '1676131395_Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg'),
+(683, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(684, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(685, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(686, 'Camera Sony', 0, 'camera', '1676131210_sony-zv-1-03.jpg'),
+(687, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg'),
+(688, 'iphone 11 pro max', 0, 'DIENTHOAI', '1676131082_OIP.jpg');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -130,7 +163,7 @@ ALTER TABLE `tbl_name`
 -- AUTO_INCREMENT cho bảng `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=557;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=689;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
