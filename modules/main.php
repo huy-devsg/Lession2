@@ -1,10 +1,9 @@
 <div class="main">
     <?php
-
-        if(isset($_GET['action']))
+        if(isset($_GET['menu']))
         {
-            $click = $_GET['action'];
-            if(isset(($_GET['query'])))
+            $click = $_GET['menu'];
+            if(isset($_GET['query']))
             {
                 $query = $_GET['query'];
             }
@@ -36,8 +35,10 @@
                     else
                     {
                         include('modules/product_consollers/add.php');
-                        include('modules/product_consollers/search.php');
+                       // include('modules/product_consollers/search.php');
                     include('modules/product_consollers/product_list.php'); 
+                    include('modules/product_consollers/paginations.php');
+
                     }             
                 }
             elseif($click=='categories')

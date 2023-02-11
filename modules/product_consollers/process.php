@@ -36,7 +36,7 @@ class Product
             VALUES ('".$this->product_name."','".$this->category_name."','".$this->category_id."','".$this->images."')";
             mysqli_query($this->mysqli, $sql_add);
             move_uploaded_file($this->images_tmp, 'product_image/'.$this->images);
-            header('location:../../index.php?action=products');
+            header('location:../../index.php?menu=products');
         }
     }
 
@@ -46,7 +46,7 @@ class Product
             $sql_edit = "UPDATE tbl_product SET product_name='$this->product_name',category_name='$this->category_name',category_id='$this->category_id', category_id='$this->category_id',images='$this->images' where product_id='$this->product_id' ";
             mysqli_query($this->mysqli, $sql_edit);
             move_uploaded_file($this->images_tmp, 'product_image/'.$this->images);
-            header('location:../../index.php?action=products');
+            header('location:../../index.php?menu=products');
 
         }
     }
@@ -57,7 +57,7 @@ class Product
             $sql_detete = "DELETE FROM tbl_product where product_id='$this->product_id'";
             mysqli_query($this->mysqli, $sql_detete);
             $images_delete= unlink("product_image/'.$this->images.'"); 
-            header('location:../../index.php?action=products');
+            header('location:../../index.php?menu=products');
         }
     }
     public function copyProduct()
@@ -66,7 +66,7 @@ class Product
             $sql_add = "INSERT INTO tbl_product (product_name, category_name, category_id, images)
             VALUES ('".$this->product_name."','".$this->category_name."','".$this->category_id."','".$this->images."')";
             mysqli_query($this->mysqli, $sql_add);
-            header('location:../../index.php?action=products');
+            header('location:../../index.php?menu=products');
         }
     }
 }
